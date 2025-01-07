@@ -847,8 +847,9 @@ footer div {
 /* Media query para dispositivos móviles */
 @media (max-width: 768px) {
   .white-background {
-    background-size: cover; /* Asegura que cubra todo */
-    background-position: center center; /* Centra la imagen */
-    padding: 0; /* Elimina cualquier margen interno que pueda interferir */
+    background-size: auto 100%; /* Ajusta la altura de la imagen al contenedor */
+    background-position: center 1%; /* Focaliza el 20% superior (zona "Solucenter") */
+    background-attachment: scroll; /* Cambia a "scroll" en móviles */
+    min-height: 100vh; /* Asegura que el fondo ocupe toda la pantalla */
   }
 }
