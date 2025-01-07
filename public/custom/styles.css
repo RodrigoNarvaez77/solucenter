@@ -327,46 +327,58 @@ footer div {
 /* ====================================
    MEDIA QUERIES
 ==================================== */
+/* Estilos generales */
+.banner {
+  padding: 70px 20px; /* Más espacio en la parte superior e inferior */
+}
+
+.banner h3 {
+  font-size: 2.5rem; /* Tamaño más grande para el título */
+  line-height: 1.3; /* Mejor espaciado entre líneas */
+  margin-bottom: 20px; /* Espacio con el siguiente elemento */
+}
+
+.project-images {
+  gap: 2rem; /* Más espacio entre imágenes */
+  justify-content: center;
+  flex-wrap: wrap; /* Permitir que las imágenes se acomoden en línea o columna según el espacio */
+}
+
+.project-img {
+  width: 100%; /* Asegurar que ocupe todo el ancho del contenedor */
+  max-width: 300px; /* Limitar el tamaño máximo */
+  margin-bottom: 20px; /* Espacio entre imágenes */
+}
+
+/* Media queries para dispositivos móviles */
 @media (max-width: 768px) {
   .banner {
-    padding: 40px 20px;
+    padding: 50px 20px; /* Espacio ajustado en móviles */
   }
 
-  .image-container {
-    justify-content: center;
+  .banner h3 {
+    font-size: 2rem; /* Ajustar el tamaño del texto */
   }
 
-  .image-container img {
-    width: 100%;
-    max-width: 200px;
-    margin-bottom: 20px;
+  .project-img {
+    max-width: 250px; /* Tamaño más grande en pantallas pequeñas */
+    margin-left: auto;
+    margin-right: auto; /* Centrar imágenes */
   }
 
-  footer i {
-    font-size: 20px;
-    margin: 0 10px;
-  }
-
-  footer {
-    padding: 15px;
+  .project-images {
+    flex-direction: column; /* Apilar imágenes en columna */
+    gap: 1.5rem; /* Más espacio entre ellas */
   }
 }
 
 @media (max-width: 480px) {
-  .small-image {
-    width: 90%;
+  .banner h3 {
+    font-size: 1.8rem; /* Más pequeño en móviles muy pequeños */
   }
 
-  .display-5 {
-    font-size: 1.5rem;
-  }
-
-  .lead {
-    font-size: 1rem;
-  }
-
-  .btn {
-    width: 100%;
+  .project-img {
+    max-width: 200px; /* Tamaño ajustado para pantallas pequeñas */
   }
 }
 

@@ -75,12 +75,7 @@
         <img src="./images/fotoedificio.png" alt="sucursales" />
         <div class="overlay">
           <h2>Solicita una Cotización</h2>
-          <form
-            id="contactForm"
-            method="POST"
-            action="../routes/contacto.php"
-            class="cotizacion-form"
-          >
+          <form id="contactForm">
             <div class="mb-3">
               <label for="nombre" class="form-label">Nombre</label>
               <input
@@ -275,22 +270,28 @@
             Servicios de arquitectura y Gestión de la construcción.
           </h3>
           <br />
-          <div class="project-images d-flex justify-content-center gap-2">
-            <img
-              src="./images/imagen1.png"
-              alt="Producto 1"
-              class="img-fluid project-img"
-            />
-            <img
-              src="./images/imagen2.png"
-              alt="Producto 2"
-              class="img-fluid project-img"
-            />
-            <img
-              src="./images/imagen3.png"
-              alt="Producto 3"
-              class="img-fluid project-img"
-            />
+          <div class="row justify-content-center">
+            <div class="col-12 col-md-4 mb-4">
+              <img
+                src="./images/imagen1.png"
+                alt="Producto 1"
+                class="img-fluid project-img"
+              />
+            </div>
+            <div class="col-12 col-md-4 mb-4">
+              <img
+                src="./images/imagen2.png"
+                alt="Producto 2"
+                class="img-fluid project-img"
+              />
+            </div>
+            <div class="col-12 col-md-4 mb-4">
+              <img
+                src="./images/imagen3.png"
+                alt="Producto 3"
+                class="img-fluid project-img"
+              />
+            </div>
           </div>
           <p class="custom-title">Diseñamos y construimos.</p>
           <a href="construccion.html" class="btn btn-primary" id="visit-button"
