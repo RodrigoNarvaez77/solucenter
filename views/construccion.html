@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Solucenter Construcción: Proveemos materiales, herramientas y asesoría especializada para tus proyectos de construcción."
+    />
+    <title>Solucenter Construcción</title>
+    <link rel="icon" type="image/png" href="./images/favicon.png" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./custom/styles.css" />
+  </head>
+  <body>
+    <!-- Contenido principal -->
+    <div id="main-content2">
+      <!-- Header -->
+      <header>
+        <nav
+          class="navbar navbar-expand-lg navbar-dark bg-dark"
+          aria-label="Main navigation"
+        >
+          <div class="container">
+            <a class="navbar-brand" href="#">
+              <img
+                src="./images/logo solucenter construcción blanco.png"
+                alt="Logo de Ferretería Solucenter"
+                style="width: 250px; height: auto"
+              />
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="#cotizacion">Cotización</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#compromiso">Compromiso</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#proyectos">Proyectos</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#redes">Redes Sociales</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <!-- Notificación -->
+      <div id="notification" class="notification hidden" role="alert"></div>
+
+      <!-- Formulario -->
+      <section class="image-container">
+        <img src="./images/fotoedificio.png" alt="sucursales" />
+        <div class="overlay">
+          <h2>Solicita una Cotización</h2>
+          <form
+            id="contactForm"
+            method="POST"
+            action="../routes/contacto.php"
+            class="cotizacion-form"
+          >
+            <div class="mb-3">
+              <label for="nombre" class="form-label">Nombre</label>
+              <input
+                type="text"
+                class="form-control"
+                id="nombre"
+                name="nombre"
+                placeholder="Tu nombre"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Correo Electrónico</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                name="email"
+                placeholder="Tu correo electrónico"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="telefono" class="form-label">Teléfono</label>
+              <input
+                type="tel"
+                class="form-control"
+                id="telefono"
+                name="telefono"
+                placeholder="Tu teléfono"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="mensaje" class="form-label">Mensaje</label>
+              <textarea
+                class="form-control"
+                id="mensaje"
+                name="mensaje"
+                rows="3"
+                placeholder="Detalles de tu consulta"
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" id="submit-button">
+              Enviar Cotización
+            </button>
+          </form>
+        </div>
+      </section>
+      <!-- Información -->
+      <section class="bg-white text-dark py-5">
+        <div class="container">
+          <!-- Título principal -->
+          <div class="text-center mb-5">
+            <h2 id="compromiso" class="display-4 fw-bold">
+              Comprometidos con tus proyectos de construcción
+            </h2>
+            <p class="lead">
+              Proveemos soluciones integrales para tus proyectos de
+              construcción. Con un inventario completo y un equipo
+              especializado, garantizamos calidad, eficiencia y soporte en cada
+              etapa.
+            </p>
+          </div>
+          <!-- Sección de características -->
+          <div class="row justify-content-around text-center">
+            <div class="col-md-2">
+              <i class="bi bi-bricks fs-1 text-primary"></i>
+              <h5 class="fw-bold mt-3">Materiales de Calidad</h5>
+              <p>
+                Ofrecemos los mejores materiales para garantizar la durabilidad
+                de tus proyectos.
+              </p>
+            </div>
+            <div class="col-md-2">
+              <i class="bi bi-person-lines-fill fs-1 text-primary"></i>
+              <h5 class="fw-bold mt-3">Asesoría Experta</h5>
+              <p>
+                Un equipo de especialistas listos para apoyarte en cada paso de
+                tu proyecto.
+              </p>
+            </div>
+            <div class="col-md-2">
+              <i class="bi bi-truck fs-1 text-primary"></i>
+              <h5 class="fw-bold mt-3">Logística Eficiente</h5>
+              <p>
+                Entregamos materiales de manera rápida y segura directamente a
+                tu obra.
+              </p>
+            </div>
+            <div class="col-md-2">
+              <i class="bi bi-gear-wide-connected fs-1 text-primary"></i>
+              <h5 class="fw-bold mt-3">Herramientas Modernas</h5>
+              <p>
+                Equipamiento de última generación para trabajos más precisos y
+                eficientes.
+              </p>
+            </div>
+            <div class="col-md-2">
+              <i class="bi bi-hammer fs-1 text-primary"></i>
+              <h5 class="fw-bold mt-3">Soluciones Integrales</h5>
+              <p>
+                Todo lo que necesitas para construcción en un solo lugar, al
+                mejor precio.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Banner Central -->
+      <section class="banner bg-light text-center py-5">
+        <div class="container">
+          <h2 id="proyectos" class="custom-title-large">Proyectos</h2>
+          <div
+            class="project-images d-flex justify-content-center flex-wrap gap-2 mt-4"
+          >
+            <img
+              src="./images/interior 1.png"
+              alt="Interior terminado con acabados modernos"
+              class="img-fluid project-img"
+            />
+            <img
+              src="./images/interior 2.png"
+              alt="Sala de estar moderna"
+              class="img-fluid project-img"
+            />
+            <img
+              src="./images/interior 3.png"
+              alt="Diseño de interiores contemporáneo"
+              class="img-fluid project-img"
+            />
+          </div>
+          <div
+            class="project-images d-flex justify-content-center flex-wrap gap-2 mt-4"
+          >
+            <img
+              src="./images/tienda 1.png"
+              alt="Vista exterior de tienda"
+              class="img-fluid project-img"
+            />
+            <img
+              src="./images/tienda 2.png"
+              alt="Fachada de una tienda comercial"
+              class="img-fluid project-img"
+            />
+            <img
+              src="./images/tienda 3.png"
+              alt="Proyecto comercial moderno"
+              class="img-fluid project-img"
+            />
+          </div>
+          <p class="custom-title mt-4">Diseñamos y construimos a tu medida.</p>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="bg-dark text-white text-center py-3">
+        <p id="redes">
+          &copy; 2024 Solucenter Construcción. Todos los derechos reservados.
+        </p>
+        <ul class="list-inline">
+          <li class="list-inline-item">
+            <a
+              href="https://instagram.com/solucenter_construccion"
+              class="text-white"
+              ><i class="bi bi-instagram" style="font-size: 24px"></i
+            ></a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+
+    <!-- Botón flotante de WhatsApp -->
+    <div class="whatsapp-menu position-fixed bottom-0 end-0 p-3">
+      <button
+        class="btn-whatsapp"
+        id="whatsappButton"
+        aria-label="Abrir contacto por WhatsApp"
+      >
+        <i class="bi bi-whatsapp"></i>
+      </button>
+      <div class="linktree" id="whatsappMenu">
+        <ul class="list-group">
+          <li class="list-group-item">
+            <div class="d-flex justify-content-between align-items-center">
+              <div>
+                <h5 class="branch-name">Contáctanos</h5>
+                <p class="branch-address">Asistente de Proyectos</p>
+              </div>
+              <a
+                href="https://wa.me/+56994458337"
+                class="btn btn-success btn-circle"
+                aria-label="Enviar mensaje por WhatsApp"
+              >
+                <i class="bi bi-whatsapp"></i>
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      defer
+    ></script>
+    <script src="./viewsjs/index.js" defer></script>
+    <script src="./viewsjs/index2.js" defer></script>
+  </body>
+</html>

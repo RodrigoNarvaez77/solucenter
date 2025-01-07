@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ferretería Solucenter</title>
+    <link rel="icon" type="image/png" href="./images/favicon.png" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./custom/styles.css" />
+  </head>
+  <body>
+    <!-- Preloader -->
+    <div id="preloader">
+      <img id="logo" src="./images/logo ferretería blanco.png" alt="Logo" />
+    </div>
+    <!-- Contenido principal -->
+    <div id="main-content">
+      <!-- Header -->
+      <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <div class="container">
+            <a class="navbar-brand" href="#">
+              <!--<h1 class="display-6 m-0">Ferretería Solucenter</h1>-->
+              <img
+                src="./images/logo ferretería blanco.png"
+                alt="Logo Ferretería"
+                style="width: 250px; height: auto"
+              />
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="#cotizacion">Cotización</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#compromiso">Compromiso</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#pago">Pago</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#categorias">Categorías</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#redes">Redes sociales</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <!-- Notificacion de envio de formulario -->
+      <div id="notification" class="notification hidden"></div>
+      <!-- Section del form -->
+      <section class="image-container">
+        <img src="./images/fotoedificio.png" alt="sucursales" />
+        <div class="overlay">
+          <h2>Solicita una Cotización</h2>
+          <form
+            id="contactForm"
+            method="POST"
+            action="../routes/contacto.php"
+            class="cotizacion-form"
+          >
+            <div class="mb-3">
+              <label for="nombre" class="form-label">Nombre</label>
+              <input
+                type="text"
+                class="form-control"
+                id="nombre"
+                name="nombre"
+                placeholder="Tu nombre"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Correo Electrónico</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                name="email"
+                placeholder="Tu correo electrónico"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="telefono" class="form-label">Teléfono</label>
+              <input
+                type="tel"
+                class="form-control"
+                id="telefono"
+                name="telefono"
+                placeholder="Tu teléfono"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="mensaje" class="form-label">Mensaje</label>
+              <textarea
+                class="form-control"
+                id="mensaje"
+                name="mensaje"
+                rows="3"
+                placeholder="Detalles de tu consulta"
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" id="submit-button">
+              Enviar Cotización
+            </button>
+          </form>
+        </div>
+      </section>
+      <!-- Informacion -->
+      <section class="bg-white text-dark py-5">
+        <div class="container">
+          <!-- Título principal -->
+          <div class="text-center mb-5">
+            <h2 id="compromiso" class="display-4 fw-bold">
+              Comprometidos en cada etapa de tu proyecto
+            </h2>
+            <p class="lead">
+              Tenemos todo lo necesario para tu proyecto. Nuestro amplio stock
+              asegura disponibilidad en todos nuestros productos, garantizando
+              calidad y eficiencia en cada paso.
+            </p>
+          </div>
+          <!-- Sección de características -->
+          <div class="row justify-content-around text-center">
+            <div class="col-md-2">
+              <i class="bi bi-box2 fs-1 text-success"></i>
+              <h5 class="fw-bold mt-3">Amplio Stock</h5>
+              <p>
+                Garantizamos disponibilidad constante para satisfacer tus
+                necesidades.
+              </p>
+            </div>
+            <div class="col-md-2">
+              <i class="bi bi-people fs-1 text-success"></i>
+              <h5 class="fw-bold mt-3">Gran Equipo</h5>
+              <p>
+                Nuestro personal está comprometido con un servicio cordial y
+                eficiente.
+              </p>
+            </div>
+            <div class="col-md-2">
+              <i class="bi bi-cash-coin fs-1 text-success"></i>
+              <h5 class="fw-bold mt-3">Buenos Precios</h5>
+              <p>
+                Ofrecemos productos de calidad a precios competitivos y
+                accesibles.
+              </p>
+            </div>
+            <div class="col-md-2">
+              <i class="bi bi-patch-check fs-1 text-success"></i>
+              <h5 class="fw-bold mt-3">Calidad</h5>
+              <p>
+                Calidad superior garantizada en cada pieza, con precisión y
+                excelencia.
+              </p>
+            </div>
+            <div class="col-md-2">
+              <i class="bi bi-clock-history fs-1 text-success"></i>
+              <h5 class="fw-bold mt-3">Rápida Respuesta</h5>
+              <p>
+                Respondemos con prontitud para resolver tus requerimientos de
+                manera efectiva.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Compra fácil y seguro-->
+      <section class="features py-5 bg-light">
+        <div class="container">
+          <h2 id="pago" class="text-center mb-5">Compra fácil y seguro</h2>
+          <div class="row text-center">
+            <div class="col-md-4">
+              <i class="bi bi-journal-text fs-1 text-primary"></i>
+              <h4 class="mt-3">Cotiza fácilmente</h4>
+              <p>Solicita cotizaciones de forma digital o presencial.</p>
+            </div>
+            <div class="col-md-4">
+              <i class="bi bi-credit-card fs-1 text-primary"></i>
+              <h4 class="mt-3">Paga cómodamente</h4>
+              <p>Usa nuestros múltiples métodos de pago.</p>
+            </div>
+            <div class="col-md-4">
+              <i class="bi bi-truck fs-1 text-primary"></i>
+              <h4 class="mt-3">Retira o recibe</h4>
+              <p>Recoge tus productos en tienda o solicita despacho.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Campos adicionales -->
+
+      <section class="features py-5">
+        <div class="container">
+          <div class="row text-center align-items-stretch">
+            <h3 id="categorias" class="custom-title-large">Categorías</h3>
+
+            <!-- Columna 1: Productos -->
+            <div class="col-md-4 feature-item fade-in d-flex flex-column">
+              <img
+                src="./images/pelotaproductos.png"
+                alt="Productos"
+                class="img-fluid project-img rounded-element"
+              />
+              <h3 class="custom-title">Productos</h3>
+              <p class="custom-text-small">
+                Amplia gama de herramientas y materiales de construcción.
+              </p>
+            </div>
+
+            <!-- Columna 2: Servicios -->
+            <div class="col-md-4 feature-item fade-in d-flex flex-column">
+              <img
+                src="./images/servicios.png"
+                alt="Servicios"
+                class="img-fluid project-img rounded-element"
+              />
+              <h3 class="custom-title">Servicios</h3>
+              <p class="custom-text-small">
+                Despachos gratis Arauco, Curanilahue, Cañete, Huillinco, Santa
+                Juana.
+              </p>
+            </div>
+
+            <!-- Columna 3: Mapa -->
+            <div class="col-md-4 feature-item fade-in d-flex flex-column">
+              <div class="map-container">
+                <iframe
+                  src="https://www.google.com/maps/d/embed?mid=1zNKJjn5B9lpbGxrwn258gD8XFoZQhkY&ehbc=2E312F"
+                  width="100%"
+                  height="400"
+                  style="border: 0; border-radius: 15px"
+                  allowfullscreen=""
+                  loading="lazy"
+                ></iframe>
+              </div>
+              <h3 class="custom-title">Mapa</h3>
+              <p class="custom-text-small">
+                Conoce nuestras sucursales en la Región del Bio-Bío.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Banner Central -->
+      <section class="banner bg-light text-center py-5">
+        <div class="container">
+          <h3 class="custom-title">
+            Servicios de arquitectura y Gestión de la construcción.
+          </h3>
+          <br />
+          <div class="project-images d-flex justify-content-center gap-2">
+            <img
+              src="./images/imagen1.png"
+              alt="Producto 1"
+              class="img-fluid project-img"
+            />
+            <img
+              src="./images/imagen2.png"
+              alt="Producto 2"
+              class="img-fluid project-img"
+            />
+            <img
+              src="./images/imagen3.png"
+              alt="Producto 3"
+              class="img-fluid project-img"
+            />
+          </div>
+          <p class="custom-title">Diseñamos y construimos.</p>
+          <a href="construccion.html" class="btn btn-primary" id="visit-button"
+            >Visítanos</a
+          >
+        </div>
+      </section>
+      <!-- Footer -->
+      <footer class="bg-dark text-white text-center py-3">
+        <p id="redes">
+          &copy; 2024 Ferretería Solucenter. Todos los derechos reservados.
+        </p>
+        <div>
+          <a
+            href="https://instagram.com/solucenter_tienda"
+            class="text-white me-3"
+          >
+            <i class="bi bi-instagram" style="font-size: 24px"></i>
+          </a>
+          <a
+            href="https://tiktok.com/ferreteriasolucenter"
+            class="text-white me-3"
+          >
+            <i class="bi bi-tiktok" style="font-size: 24px"></i>
+          </a>
+          <a
+            href="https://facebook.com/ferreteriasolucenter"
+            class="text-white me-3"
+          >
+            <i class="bi bi-facebook" style="font-size: 24px"></i>
+          </a>
+          <a
+            href="https://youtube.com/ferreteriasolucenter"
+            class="text-white me-3"
+          >
+            <i class="bi bi-youtube" style="font-size: 24px"></i>
+          </a>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Botón flotante de WhatsApp -->
+    <div class="whatsapp-menu">
+      <button class="btn-whatsapp" id="whatsappButton">
+        <i class="bi bi-whatsapp"></i>
+      </button>
+      <div class="linktree" id="whatsappMenu">
+        <ul class="list-group">
+          <li class="list-group-item">
+            <div class="d-flex justify-content-between align-items-center">
+              <div>
+                <h5 class="branch-name">Casa Matriz</h5>
+                <p class="branch-address">Condell 615, Arauco</p>
+              </div>
+              <a
+                href="https://wa.me/+56976151892"
+                class="btn btn-success btn-circle"
+              >
+                <i class="bi bi-whatsapp"></i>
+              </a>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <div class="d-flex justify-content-between align-items-center">
+              <div>
+                <h5 class="branch-name">Sucursal Arauco</h5>
+                <p class="branch-address">O´Higgins 395</p>
+              </div>
+              <a
+                href="https://wa.me/+56976151892"
+                class="btn btn-success btn-circle"
+              >
+                <i class="bi bi-whatsapp"></i>
+              </a>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <div class="d-flex justify-content-between align-items-center">
+              <div>
+                <h5 class="branch-name">Sucursal Curanilahue</h5>
+                <p class="branch-address">O´Higgins 810</p>
+              </div>
+              <a
+                href="https://wa.me/+56976151892"
+                class="btn btn-success btn-circle"
+              >
+                <i class="bi bi-whatsapp"></i>
+              </a>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <div class="d-flex justify-content-between align-items-center">
+              <div>
+                <h5 class="branch-name">Sucursal Cañete</h5>
+                <p class="branch-address">Villagran 1075</p>
+              </div>
+              <a
+                href="https://wa.me/+56976151892"
+                class="btn btn-success btn-circle"
+              >
+                <i class="bi bi-whatsapp"></i>
+              </a>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <div class="d-flex justify-content-between align-items-center">
+              <div>
+                <h5 class="branch-name">Sucursal Huillinco</h5>
+                <p class="branch-address">Huillinco S/N</p>
+              </div>
+              <a
+                href="https://wa.me/+56976151892"
+                class="btn btn-success btn-circle"
+              >
+                <i class="bi bi-whatsapp"></i>
+              </a>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <div class="d-flex justify-content-between align-items-center">
+              <div>
+                <h5 class="branch-name">Sucursal Santa Juana</h5>
+                <p class="branch-address">Lautaro 1097</p>
+              </div>
+              <a
+                href="https://wa.me/+56976151892"
+                class="btn btn-success btn-circle"
+              >
+                <i class="bi bi-whatsapp"></i>
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./viewsjs/index.js"></script>
+    <script src="./viewsjs/index2.js"></script>
+  </body>
+</html>
