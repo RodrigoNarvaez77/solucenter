@@ -832,3 +832,23 @@ footer div {
   border-radius: 15px; /* Mantiene las esquinas redondeadas */
   pointer-events: auto; /* Permite la interacción con el mapa */
 }
+
+/* ====================================
+  Fondo Blanco
+==================================== */
+.white-background {
+  background-image: url("../images/ferretera_solucenter_cover.png");
+  background-repeat: no-repeat;
+  background-size: cover; /* La imagen cubrirá toda la sección */
+  background-attachment: fixed; /* Imagen fija al hacer scroll */
+  background-position: center; /* Centrar la imagen en pantallas grandes */
+}
+
+/* Media query para dispositivos móviles */
+@media (max-width: 768px) {
+  .white-background {
+    background-size: cover; /* Asegura que cubra todo */
+    background-position: center center; /* Centra la imagen */
+    padding: 0; /* Elimina cualquier margen interno que pueda interferir */
+  }
+}
