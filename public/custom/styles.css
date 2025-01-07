@@ -853,3 +853,24 @@ footer div {
     min-height: 100vh; /* Asegura que el fondo ocupe toda la pantalla */
   }
 }
+
+/* ====================================
+  Fondo Blanco Constructora
+==================================== */
+.white-background2 {
+  background-image: url("../images/constru2.png");
+  background-repeat: no-repeat;
+  background-size: cover; /* La imagen cubrirá toda la sección */
+  background-attachment: fixed; /* Imagen fija al hacer scroll */
+  background-position: center; /* Centrar la imagen en pantallas grandes */
+}
+
+/* Media query para dispositivos móviles */
+@media (max-width: 768px) {
+  .white-background2 {
+    background-size: auto 100%; /* Ajusta la altura de la imagen al contenedor */
+    background-position: center 1%; /* Focaliza el 20% superior (zona "Solucenter") */
+    background-attachment: scroll; /* Cambia a "scroll" en móviles */
+    min-height: 100vh; /* Asegura que el fondo ocupe toda la pantalla */
+  }
+}

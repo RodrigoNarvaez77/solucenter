@@ -187,3 +187,30 @@ SendGrid\Response Object
         )
 
 )
+SendGrid\Response Object
+(
+    [statusCode:protected] => 202
+    [body:protected] => 
+    [headers:protected] => Array
+        (
+            [0] => HTTP/1.1 202 Accepted
+            [1] => Server: nginx
+            [2] => Date: Tue, 07 Jan 2025 18:44:24 GMT
+            [3] => Content-Length: 0
+            [4] => Connection: keep-alive
+            [5] => X-Message-Id: GJf6dt_XQFy0HkATgaSdvQ
+            [6] => Access-Control-Allow-Origin: https://sendgrid.api-docs.io
+            [7] => Access-Control-Allow-Methods: POST
+            [8] => Access-Control-Allow-Headers: Authorization, Content-Type, On-behalf-of, x-sg-elas-acl
+            [9] => Access-Control-Max-Age: 600
+            [10] => X-No-CORS-Reason: https://sendgrid.com/docs/Classroom/Basics/API/cors.html
+            [11] => Strict-Transport-Security: max-age=31536000; includeSubDomains
+            [12] => Content-Security-Policy: frame-ancestors 'none'
+            [13] => Cache-Control: no-cache
+            [14] => X-Content-Type-Options: no-sniff
+            [15] => Referrer-Policy: strict-origin-when-cross-origin
+            [16] => 
+            [17] => 
+        )
+
+)
